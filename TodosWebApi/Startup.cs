@@ -31,8 +31,8 @@ namespace TodosWebApi
 
             //Depedency Injection - konfigurujemy tutaj wstrzykiwanie zależności
             //Mówim że jak będziemy chcieli pobrać obiekty, który implementuje interface ITodoRepository
-            //serwis ma nam zwrócić obiekt typu MockRepository
-            services.Add(new ServiceDescriptor(typeof(ITodoRepository), new MockRepository()));
+            //serwis ma nam zwrócić obiekt typu TodoRepository
+            services.Add(new ServiceDescriptor(typeof(ITodoRepository), new TodoRepository()));
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

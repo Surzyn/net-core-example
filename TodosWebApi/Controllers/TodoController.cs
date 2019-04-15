@@ -24,6 +24,12 @@ namespace TodosWebApi.Controllers
             return Ok(_todoRepository.GetTodos());
         }
 
-    
+        [HttpPost]
+        public IActionResult AddTodo(Todo todo)
+        {
+            _todoRepository.AddTodo(todo);
+            return Ok();
+        }
+
     }
 }

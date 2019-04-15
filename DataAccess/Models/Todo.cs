@@ -4,6 +4,7 @@ using System.Text;
 
 namespace DataAccess.Models
 {
+    //Model który będzie odzwierciedlał nam tabelkę w bazie danych
     public class Todo
     {
         public int Id { get; set; }

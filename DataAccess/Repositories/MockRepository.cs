@@ -6,8 +6,15 @@ using System.Text;
 
 namespace DataAccess.Repositories
 {
+    //Złamanie zasady Interface segregation z SOLID - nie róbta tak :)
+    //MockRepository jest tylko w ramach przykładu
     public class MockRepository : ITodoRepository
     {
+        public void AddTodo(Todo todo)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Todo> GetTodos()
         {
             var todos = new List<Todo>()
@@ -134,6 +141,21 @@ namespace DataAccess.Repositories
             };
 
             return todos;
+        }
+
+        public void MarkAsDone(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveItem(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateTodo(int id, string name)
+        {
+            throw new NotImplementedException();
         }
     }
 }
